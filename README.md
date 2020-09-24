@@ -6,7 +6,7 @@ Back-end repository of my Capstone Accountaboddies build in Django and Django RE
 ### Due date 23th September. Updates comming. 
 ### API is not fully working yet!
 
-The API is supposed to authenticate and provide the data requested from the [Front-End build in React.js](https://github.com/felipetempus/accountaboddies-front-end).
+The API is supposed to authenticate and provide the data requested from the [Front-End build in React.js](https://github.com/felipetempus/accountabuddies-react).
 
 ## Installations and Configuration for the Django Rest Framework:
 1. Clone the repository to your machine.
