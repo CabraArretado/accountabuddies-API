@@ -106,9 +106,13 @@ class Accounts(ViewSet):
 
     def list(self, request):
 
-        if request.user.id:
+        myself = self.request.query_params.get('myself', None)
+        
+        if myself:
             account = Account.objects.filter(user=request.user.id)
         else:
             account = Account.objects.all()
+
         serializer = AccountSerializer(account, many=True, context={'request': request})
+
         return Response(serializer.data)
