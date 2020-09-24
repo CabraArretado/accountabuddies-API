@@ -107,7 +107,9 @@ class Accounts(ViewSet):
     def list(self, request):
 
         myself = self.request.query_params.get('myself', None)
-        
+
+        # myself true makes just the current profile be sent back
+
         if myself:
             account = Account.objects.filter(user=request.user.id)
         else:
