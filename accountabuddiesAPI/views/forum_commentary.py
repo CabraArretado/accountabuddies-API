@@ -71,11 +71,10 @@ class ForumCommentaries(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        pass
-        # forum_commentary = ForumPost.objects.get(pk=pk)
-        # forum_commentary.title = request.data["title"]
-        # forum_commentary.content = request.data["content"]
-        # forum_commentary.save()
+        forum_commentary = ForumCommentary.objects.get(pk=pk)
+        forum_commentary.title = request.data["title"]
+        forum_commentary.content = request.data["content"]
+        forum_commentary.save()
 
         return Response({}, status=status.HTTP_204_NO_CONTENT)
 
