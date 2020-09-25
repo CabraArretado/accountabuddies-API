@@ -67,11 +67,10 @@ class ForumPosts(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        pass
-        # forum_post = ForumPost.objects.get(pk=pk)
-        # forum_post.title = request.data["title"]
-        # forum_post.content = request.data["content"]
-        # forum_post.save()
+        forum_post = ForumPost.objects.get(pk=pk)
+        forum_post.title = request.data["title"]
+        forum_post.content = request.data["content"]
+        forum_post.save()
 
         return Response({}, status=status.HTTP_204_NO_CONTENT)
 
