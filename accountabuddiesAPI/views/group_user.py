@@ -109,9 +109,11 @@ class GroupUsers(ViewSet):
 
         # has to send my_groups as true to send back all the relaitons
         my_groups = self.request.query_params.get('my_groups', None)
+        leave_group = self.request.query_params.get('leave_group', None)
 
         if my_groups is not None:
             user_groups = request.auth.user.groupuser_set.all()
+
 
         serializer = GroupUserSerializer(user_groups, many=True, context={'request': request})
         return Response(serializer.data)
