@@ -1,10 +1,6 @@
-# Accountabuddies API
+# Account-a-buddies API
 
 Back-end repository of my Capstone Accountaboddies build in Django and Django REST. 
-
-
-### Due date 23th September. Updates comming. 
-### API is not fully working yet!
 
 The API is supposed to authenticate and provide the data requested from the [Front-End build in React.js](https://github.com/felipetempus/accountabuddies-react).
 
