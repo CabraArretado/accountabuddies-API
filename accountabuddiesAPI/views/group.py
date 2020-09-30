@@ -35,6 +35,7 @@ class Groups(ViewSet):
 
         group = Group.objects.create(
             title=request.data["title"],
+            description=request.data["description"],
             size=request.data["size"],
             created_by=user,
             population=1

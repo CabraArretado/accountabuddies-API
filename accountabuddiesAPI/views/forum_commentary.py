@@ -33,7 +33,9 @@ class ForumCommentaries(ViewSet):
             Response -- JSON serialized ForumPost instance
         """
         user = User.objects.get(pk=request.auth.user.id)
+
         group = Group.objects.get(pk=request.data["group"])
+        
         post = ForumPost.objects.get(pk=request.data["post"])
         
 
